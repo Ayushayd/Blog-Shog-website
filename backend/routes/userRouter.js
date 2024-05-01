@@ -3,9 +3,6 @@ import express from 'express';
 import { isAuthenticated, isAuthorized } from '../middleware/auth.js';
 
 const router = express.Router();
-router.get('/', (res, res) => {
-    res.send("hello");
-})
 router.post("/register", register);
 router.post("/login", login);
 router.get("/logout", logout, isAuthenticated);
