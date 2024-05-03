@@ -7,14 +7,14 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import axios from 'axios'
 import toast from 'react-hot-toast'
 import { SERVER_URL } from '../../ServerURL.js';
-// import { FRONTEND_URL } from '../../FrontendURL.js'; 
+import { FRONTEND_URL } from '../../FrontendURL.js'; 
 
 const Navbar = () => {
   const [show, setShow] = useState("false");
   const handleNavbar = () => {
     setShow(!show);
   };
-  const isDashboard = useLocation(`https://blog-shog.netlify.app/dashboard`);
+  const isDashboard = useLocation(`${FRONTEND_URL}/dashboard`);
 
   const {mode, setMode, isAuthenticated, user, setIsAuthenticated} = useContext(Context);
 
