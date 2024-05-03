@@ -20,7 +20,7 @@ import { SERVER_URL } from './ServerURL.js'
 
 const App = () => {
   const {setUser, isAuthenticated, setIsAuthenticated, user, setBlogs} = useContext(Context);
-  
+
 
   useEffect(() => {
     const fetchUser = async() => {
