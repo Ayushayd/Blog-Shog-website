@@ -14,7 +14,9 @@ const Navbar = () => {
   const handleNavbar = () => {
     setShow(!show);
   };
-  const isDashboard = useLocation(`${FRONTEND_URL}/dashboard`);
+  // const isDashboard = useLocation(`${FRONTEND_URL}/dashboard`);
+  const location = useLocation();
+  const isDashboard = location.pathname === '/dashboard';
 
   const {mode, setMode, isAuthenticated, user, setIsAuthenticated} = useContext(Context);
 
