@@ -7,7 +7,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import axios from 'axios'
 import toast from 'react-hot-toast'
 import { SERVER_URL } from '../../ServerURL.js';
-import { FRONTEND_URL } from '../../FrontendURL.js'; 
+// import { FRONTEND_URL } from '../../FrontendURL.js'; 
 
 const Navbar = () => {
   const [show, setShow] = useState("false");
