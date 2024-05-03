@@ -25,7 +25,7 @@ const App = () => {
   useEffect(() => {
     const fetchUser = async() => {
       try {
-        const {data} = await axios.get(`${SERVER_URL}/user/myProfile`,{
+        const {data} = await axios.get(`https://blog-shog-website.onrender.com/api/v1/user/myProfile`,{
           withCredentials: true
         })
         setUser(data.user);
