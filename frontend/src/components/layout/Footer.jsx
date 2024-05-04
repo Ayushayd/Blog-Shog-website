@@ -8,9 +8,9 @@ import { AiFillLinkedin } from "react-icons/ai";
 // import { FRONTEND_URL } from '../../FrontendURL';
 
 const Footer = () => {
-  // const isDashboard = useLocation(`${FRONTEND_URL}/dashboard`);
-  const location = useLocation();
-  const isDashboard = location.pathname === '/dashboard';
+  const isDashboard = useLocation(`${FRONTEND_URL}/dashboard`);
+  // const location = useLocation();
+  // const isDashboard = location.pathname === '/dashboard';
   const {mode} = useContext(Context);
 
   return (
