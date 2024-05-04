@@ -5,7 +5,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import { FaGitSquare } from "react-icons/fa";
 import { AiFillYoutube } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
-// import { FRONTEND_URL } from '../../FrontendURL';
+import { FRONTEND_URL } from '../../FrontendURL';
 
 const Footer = () => {
   const isDashboard = useLocation(`${FRONTEND_URL}/dashboard`);
