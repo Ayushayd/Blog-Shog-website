@@ -27,6 +27,7 @@ const Login = () => {
       setPassword("");
       setRole("");
       navigeteTo("/");
+      isAuthenticated(true);
     }).catch(error => {
       toast.error(error.response.data.message);
     })
