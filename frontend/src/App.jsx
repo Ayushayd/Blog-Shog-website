@@ -49,6 +49,10 @@ const App = () => {
     fetchBlogs();
   }, [isAuthenticated, user])
 
+  useEffect(() => {
+    console.log('isAuthenticated or user changed: ', isAuthenticated, user);
+  },[isAuthenticated, user]);
+
   return (
     <>
       <Router>
