@@ -21,7 +21,6 @@ import { SERVER_URL } from './ServerURL.js'
 const App = () => {
   const {setUser, isAuthenticated, setIsAuthenticated, user, setBlogs} = useContext(Context);
 
-
   useEffect(() => {
     const fetchUser = async() => {
       try {
@@ -35,6 +34,11 @@ const App = () => {
         setUser({});
       }
     };
+    fetchUser();
+  }, [isAuthenticated, user])
+
+
+  useEffect(() => {
     const fetchBlogs = async() => {
       try {
         const {data} = await axios.get(`${SERVER_URL}/blog/all`, {
@@ -45,13 +49,9 @@ const App = () => {
         setBlogs([])
       }
     };
-    fetchUser();
     fetchBlogs();
-  }, [isAuthenticated, user])
+  }, [])
 
-  useEffect(() => {
-    console.log('isAuthenticated or user changed: ', isAuthenticated, user);
-  },[isAuthenticated, user]);
 
   return (
     <>

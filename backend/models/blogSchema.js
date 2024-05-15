@@ -91,6 +91,6 @@ const blogSchema = new mongoose.Schema({
         type: Boolean,
         default: false,
     }
-})
+}, {timestamps: true})
 
 export const Blog = mongoose.model("Blog", blogSchema);

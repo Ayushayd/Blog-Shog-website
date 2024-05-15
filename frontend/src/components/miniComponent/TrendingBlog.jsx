@@ -7,6 +7,7 @@ import { BeatLoader } from 'react-spinners';
 
 const TrendingBlogs = () => {
   const {blogs} = useContext(Context)
+  const trendBlogs = blogs.sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt) || new Date(b.createdAt) - new Date(a.createdAt));
 
 const responsive = {
   superLargeDesktop: {
@@ -37,9 +38,9 @@ return(
     <h3>Trending</h3>
     <Carousel responsive={responsive}>
       {
-      blogs && blogs.length > 0 ? (
-        blogs.slice(0, 6).map((element) => {
-          return(
+      trendBlogs && trendBlogs.length > 0 ? (
+        trendBlogs.slice(0, 6).map((element) => {
+        return(
           <Link to={`/blog/${element._id}`} className='card' key={element._id}>
             <img src={element.mainImage.url} alt="blog" className='blogImg' />
             <span className='category'>{element.category}</span>
