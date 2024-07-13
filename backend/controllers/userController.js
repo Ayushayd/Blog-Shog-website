@@ -37,7 +37,7 @@ export const register = catchAsyncErrors(async (req, res, next) => {
   // Password validation
   const passwordError = validatePassword(password);
   if (passwordError) {
-    return next(new ErrorHandler(passwordError, 400));
+    return next(new ErrorHandler(passwordError, 401));
   }
 
   let user = await User.findOne({ email });
