@@ -1298,18 +1298,18 @@ footer .container:last-child .links a svg {
   align-items: center;
 }
 
-@media (min-width: 414px) {
+@media (min-width: 410px) {
   .icon-wrapper {
     display: flex;
-    top: 12vh;
+    top: 10vh;
   }
   .sidebar {
     left: -200%;
-    /* transition: 0.3s; */
+    transition: 0.3s;
   }
   .show-sidebar {
     left: 0;
-    /* transition: 0.3s; */
+    transition: 0.3s;
   }
   .sidebar .icon-wrapper-arrow {
     display: flex;
