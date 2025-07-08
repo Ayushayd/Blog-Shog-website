@@ -39,6 +39,11 @@ app.use(
 
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/blog", blogRouter);
+app.get("/api/health", (req, res) => {
+  res.status(200).json({
+    status: "ok",
+  });
+});
 
 dbConnection();
 app.get("/", (req, res) => {
